@@ -1,0 +1,29 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "al-majd-motors",
+          "appId": "1:463874956038:android:3d14e18b69f3965c2d1c87",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "al-majd-motors",
+          "configurations": {
+            "android": "1:463874956038:android:3d14e18b69f3965c2d1c87",
+            "ios": "1:463874956038:ios:5546ade5f27d8f562d1c87",
+            "macos": "1:463874956038:ios:5546ade5f27d8f562d1c87",
+            "web": "1:463874956038:web:edc41337b83306042d1c87",
+            "windows": "1:463874956038:web:9dcde5b26dfa88432d1c87"
+          }
+        }
+      }
+    }
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  }
+}

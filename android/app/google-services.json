@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "463874956038",
+    "project_id": "al-majd-motors",
+    "storage_bucket": "al-majd-motors.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:463874956038:android:3d14e18b69f3965c2d1c87",
+        "android_client_info": {
+          "package_name": "com.example.cars_e_commerce"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAi7W4FeLEEu_msWPlXEtzRYEWPY-OpAd4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
