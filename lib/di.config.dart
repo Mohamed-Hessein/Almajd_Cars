@@ -21,6 +21,12 @@ import 'Features/auth/domain/usecase/log_in_usecase.dart' as _i476;
 import 'Features/auth/domain/usecase/signUp_usecase.dart' as _i806;
 import 'Features/auth/login/presentation/bloc/login_cubit.dart' as _i957;
 import 'Features/auth/signup/presentation/bloc/signup_cubit.dart' as _i354;
+import 'Features/cars_details/data/data_source/details_ds.dart' as _i383;
+import 'Features/cars_details/data/data_source/details_ds_impl.dart' as _i58;
+import 'Features/cars_details/data/repo/repo_imp_details.dart' as _i446;
+import 'Features/cars_details/domain/repo/details_repo.dart' as _i762;
+import 'Features/cars_details/domain/usecase/details_usecase.dart' as _i110;
+import 'Features/cars_details/presentation/bloc/details_bloc.dart' as _i835;
 import 'Features/home/data/data_source/remote/home_ds.dart' as _i474;
 import 'Features/home/data/data_source/remote/home_ds_impl.dart' as _i1037;
 import 'Features/home/data/repo/home_repo_impl.dart' as _i526;
@@ -36,7 +42,13 @@ extension GetItInjectableX on _i174.GetIt {
   }) {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
     gh.lazySingleton<_i237.ApiManager>(() => _i237.ApiManager());
+    gh.factory<_i383.DetailsDs>(
+      () => _i58.DetailsDsImpl(gh<_i237.ApiManager>()),
+    );
     gh.factory<_i678.FirebaseAuthDs>(() => _i1035.FirebaseAuthDsImpl());
+    gh.factory<_i762.DetailsRepo>(
+      () => _i446.RepoImpDetails(gh<_i383.DetailsDs>()),
+    );
     gh.factory<_i474.HomeDs>(() => _i1037.HomeDsImpl(gh<_i237.ApiManager>()));
     gh.factory<_i118.FirebaseFunRepo>(
       () => _i718.FirebaseAuthRepoImpl(gh<_i678.FirebaseAuthDs>()),
@@ -48,6 +60,9 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i806.SignupUsecase>(
       () => _i806.SignupUsecase(gh<_i118.FirebaseFunRepo>()),
     );
+    gh.factory<_i110.DetailsUsecase>(
+      () => _i110.DetailsUsecase(gh<_i762.DetailsRepo>()),
+    );
     gh.factory<_i354.SignupCubit>(
       () => _i354.SignupCubit(gh<_i806.SignupUsecase>()),
     );
@@ -58,6 +73,9 @@ extension GetItInjectableX on _i174.GetIt {
       () => _i888.HomeUsecase(gh<_i615.HomeRepo>()),
     );
     gh.factory<_i916.HomeBloc>(() => _i916.HomeBloc(gh<_i888.HomeUsecase>()));
+    gh.factory<_i835.DetailsBloc>(
+      () => _i835.DetailsBloc(gh<_i110.DetailsUsecase>()),
+    );
     return this;
   }
 }

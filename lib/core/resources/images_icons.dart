@@ -24,6 +24,14 @@ class IconApp {
   static String filterdIc = "${PathImageAndIconApp.pathIcon}/filter_ic.png";
   static String listIc = "${PathImageAndIconApp.pathIcon}/list_ic.png";
   static String gridIc = "${PathImageAndIconApp.pathIcon}/grid_ic.png";
+
+  static String shareIc = "${PathImageAndIconApp.pathIcon}/share_ic.png";
+  static String owned = "${PathImageAndIconApp.pathIcon}/owned.png";
+  static String fvaIC = "${PathImageAndIconApp.pathIcon}/fva_ic.png";
+  static String meialge = "${PathImageAndIconApp.pathIcon}/meialge.png";
+  static String engeine = "${PathImageAndIconApp.pathIcon}/engeine.png";
+  static String autom = "${PathImageAndIconApp.pathIcon}/autom.png";
+  static String time = "${PathImageAndIconApp.pathIcon}/time.png";
 }
 class ImageApp {
   static String imagesObbording2 = "${PathImageAndIconApp.pathImage}/Logo Icon_ Abstract Automotive Shield.png";
