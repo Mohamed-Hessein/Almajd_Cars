@@ -19,8 +19,10 @@ class HomeCarsState {
   String? errorMessage;
   int? currentIndex;
   String? currentBackground;
+ final List<dynamic> selectedCars;
 
   HomeCarsState({
+    this.selectedCars = const [],
     this.getCarsPriceStatus = CarsRequestStatus.init,
     this.getCarsSpecStatus = CarsRequestStatus.init,
     this.carsPrice,
@@ -35,11 +37,13 @@ class HomeCarsState {
     CarsRequestStatus? getCarsSpecStatus,
     CarsPrice? carsPrice,
     carapp? carsSpec,
+    List<dynamic>? selectedCars,
     String? errorMessage,
     int? currentIndex,
     String? currentBackground,
   }) {
     return HomeCarsState(
+     selectedCars: selectedCars ?? this.selectedCars,
       getCarsPriceStatus: getCarsPriceStatus ?? this.getCarsPriceStatus,
       getCarsSpecStatus: getCarsSpecStatus ?? this.getCarsSpecStatus,
       carsPrice: carsPrice ?? this.carsPrice,
