@@ -1,17 +1,49 @@
-# cars_e_commerce
+ Almajd Cars - Mobile E-commerce Task
+​A high-performance car e-commerce mobile application built with Flutter, following Clean Architecture principles and the BLoC pattern.
+​✨ Features Implemented
+​Real-time Search: Dynamic filtering of car listings by make and model.
+​Car Details: Comprehensive view for each car including technical specifications.
+​Image Carousel: Smooth image sliding with indicators to showcase multiple car views.
+​Comparison Tool: Side-by-side comparison between different car models to help user decision-making.
+​Advanced Shimmer Loading: Elegant loading states for a premium user experience (Home & Details).
+​Onboarding Experience: Interactive introduction screens for first-time users.
+​Responsive UI: Fully responsive design using flutter_screenutil to support various screen sizes.
+​🛠 Tech Stack & Architecture
+​This project follows Clean Architecture (Data, Domain, Presentation) to ensure scalability and testability.
+​State Management: flutter_bloc & bloc for predictable state changes.
+​Navigation: auto_route (Strongly-typed, declarative routing).
+​Dependency Injection: get_it & injectable for clean service locator implementation.
+​Networking: dio with pretty_dio_logger for robust API communication and debugging.
+​Backend: Firebase Auth & Cloud Firestore (Base integration).
+​UI Enhancements: google_fonts, cached_network_image, shimmer, and smooth_page_indicator.
+​📂 Project Structure
+lib/
+ ├── core/              # Common utilities, DI, Routing, & Errors
+ ├── features/
+ │    └── cars/
+ │         ├── data/     # Models, Data Sources, Repositories Impl
+ │         ├── domain/   # Entities, Repository Interfaces, Use-cases
+ │         └── presentation/
+ │              ├── bloc/
+ │              ├── pages/
+ │              └── widgets/
+ └── main.dart
 
-A new Flutter project.
+🚀 How to Run
 
-## Getting Started
+Clone the repo:
+git clone https://github.com/Mohamed-Hessein/Almajd_Cars
 
-This project is a starting point for a Flutter application.
+Install dependencies:
+flutter pub get
 
-A few resources to get you started if this is your first Flutter project:
+Run code generation:
+flutter pub run build_runner build --delete-conflicting-outputs
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+Launch the app:
+flutter run
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Roadmap (Future Improvements)
+​[ ] Favorites System: Persisting user-liked cars using Local Storage (Hive).
+​[ ] Advanced Filters: Filter by Year, Fuel Type, and Price Range.
+​[ ] Dark Mode Support: Implementation of a dynamic theme switcher.
