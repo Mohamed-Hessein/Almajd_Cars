@@ -6,27 +6,26 @@ A modern, high-performance automotive e-commerce mobile application built with *
 
 ## 📸 Screenshots
 
-Here is a visual overview of the application flow, from onboarding to main features.
-
 ### 🌟 App Flow & Authentication
-
 | Onboarding 1 | Onboarding 2 | Login Screen | Register Screen |
 | :---: | :---: | :---: | :---: |
-| <img src="screenshots/onboarding_1.png" width="200" alt="Onboarding 1"> | <img src="screenshots/onboarding_2.png" width="200" alt="Onboarding 2"> | <img src="screenshots/login.png" width="200" alt="Login Screen"> | <img src="screenshots/register.png" width="200" alt="Register Screen"> |
+| <img src="screenshots/onboarding_1.png" width="200"> | <img src="screenshots/onboarding_2.png" width="200"> | <img src="screenshots/login.png" width="200"> | <img src="screenshots/register.png" width="200"> |
 
-### 🚗 Main App Features
-
-| Home Screen | Car Details | Car Comparison |
+### 🚗 Home & Search
+| Home 1 | Home 2 | Search |
 | :---: | :---: | :---: |
-| <img src="screenshots/home.png" width="250" alt="Home Screen Screenshot"> | <img src="screenshots/home2.png" width="250" alt="Home Screen Screenshot"> | <img src="screenshots/details1.png" width="250" alt="Details Screen Screenshot"> | <img src="screenshots/details2.png" width="250" alt="Details Screen Screenshot"> | <img src="screenshots/compare.png" width="250" alt="Comparison Screen Screenshot"> | <img src="screenshots/compare2.png" width="250" alt="Comparison Screen Screenshot"> | <img src="screenshots/search.png" width="250" alt="search Screen Screenshot"> 
+| <img src="screenshots/home.png" width="250"> | <img src="screenshots/home2.png" width="250"> | <img src="screenshots/search.png" width="250"> |
 
-> **Note:** For the images to appear, you must create a directory named `screenshots` in the root of your project and place your images there with the exact filenames used above (e.g., `onboarding_1.png`, `home.png`).
+### 🔍 Details & Comparison
+| Details 1 | Details 2 | Compare 1 | Compare 2 |
+| :---: | :---: | :---: | :---: |
+| <img src="screenshots/details1.png" width="200"> | <img src="screenshots/details2.png" width="200"> | <img src="screenshots/compare.png" width="200"> | <img src="screenshots/compare2.png" width="200"> |
+
+> **Note:** Ensure the `screenshots` folder is in the **root directory** (same level as `pubspec.yaml`), NOT inside `lib`.
 
 ---
 
 ## ✨ Key Features
-
-This application includes a range of advanced features for car enthusiasts and buyers:
 
 ### 🆕 User Experience (Onboarding & Auth)
 * **Intuitive Onboarding:** A two-step immersive onboarding flow to introduce key app features.
@@ -34,69 +33,32 @@ This application includes a range of advanced features for car enthusiasts and b
 
 ### 🚀 Performance & UI
 * **Smart Image Caching:** Smooth UI performance using `cached_network_image`.
-* **Responsive Design:** Fully adaptive UI for all screen sizes (mobile/tablet) using `flutter_screenutil`.
-* **Loading Shimmers:** Elegant loading states with the `shimmer` package for a premium feel.
+* **Responsive Design:** Fully adaptive UI for all screen sizes using `flutter_screenutil`.
+* **Loading Shimmers:** Elegant loading states with the `shimmer` package.
 
 ### 🚘 Car Browsing & Comparison
-* **Dynamic Car Listing:** Filtered and shuffled car lists with unique makes to prevent redundancy.
-* **Smart Car Comparison System:** Select two cars to compare their technical specifications side-by-side.
-* **Verified Badging:** Automated verification status displayed on premium listings.
-
-### 🛠 Architecture & State
-* **State Management:** Powered by [Flutter Bloc](https://pub.dev/packages/flutter_bloc) for predictable, event-based logic.
-* **Type-Safe Routing:** Advanced navigation system with [Auto Route](https://pub.dev/packages/auto_route).
+* **Dynamic Car Listing:** Filtered and shuffled car lists with unique makes.
+* **Smart Comparison System:** Select two cars to compare their technical specifications side-by-side.
 
 ---
 
 ## 🛠 Tech Stack & Architecture
+This project follows **Clean Architecture** for scalability and maintainability.
 
-This project is built following **Clean Architecture** principles to ensure scalability, maintainability, and testability.
-
-### Packages Used:
 * **State Management:** `flutter_bloc`
 * **Navigation:** `auto_route`
-* **Local Storage:** `shared_preferences`
 * **UI/Responsive:** `flutter_screenutil`, `shimmer`, `cached_network_image`
 * **Dependency Injection:** `get_it`, `injectable`
-
-### API Integration:
-Integration with modern APIs for comprehensive car data.
 
 ---
 
 ## 🚀 How to Run the Project
-
-Follow these steps to get the project running on your local machine:
-
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/YourUsername/cars_e_commerce.git](https://github.com/YourUsername/cars_e_commerce.git)
-    ```
-2.  **Install dependencies:**
-    ```bash
-    flutter pub get
-    ```
-3.  **Generate Routing and Dependency Files:**
-    Since the project uses `auto_route` and `build_runner`:
-    ```bash
-    flutter pub run build_runner build --delete-conflicting-outputs
-    ```
-4.  **Run the app:**
-    ```bash
-    flutter run
-    ```
+1. **Clone & Install:** `flutter pub get`
+2. **Generate Files:** `flutter pub run build_runner build --delete-conflicting-outputs`
+3. **Run:** `flutter run`
 
 ---
 
-## 📂 Project Structure Snippet (Clean Architecture)
-
-```text
-lib/
-├── core/            # Reusable components, colors, themes, injection, and routing.
-├── features/        # Business features
-│   ├── auth/        # Login, Register, Onboarding features
-│   └── home/        # Main Home feature
-│       ├── data/    # Data sources, models, repositories implementations.
-│       ├── domain/  # Entities, use cases, repositories contracts.
-│       └── presentation/ # Bloc, widgets, and pages (UI).
-└── main.dart        # Entry point.
+## 👤 Author
+**Mohamed Elqadii**
+* Senior Flutter Developer
