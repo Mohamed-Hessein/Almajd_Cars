@@ -29,27 +29,30 @@ class OnbodingScreen extends StatelessWidget {
         background:ImageApp.backGroundObbordingLight,
         title:   Text(
           "AL-MAJD MOTORS",
-          style: StyleApp.lgText,
+          style: StyleApp.lgText.copyWith(fontSize: 25.r),
           textAlign: TextAlign.center,
         ),
         description:  Text(
           "Premium Automotive \nMarketplace",
-          style: StyleApp.vlagTex,
+          style: StyleApp.vlagTex.copyWith(fontSize: 14.r),
           textAlign: TextAlign.center,
         ),
         image: ImageApp.imagesObbording,
         footer: Align(
             alignment:      Alignment.bottomCenter ,
-            child: Text("Established in Riyadh",style:StyleApp.smtext.copyWith(color: ColorsApp.secondaryGrey),)),
+            child: Text("Established in Riyadh",style:StyleApp.smtext.copyWith(color: ColorsApp.secondaryGrey,fontSize: 14.r),)),
       ),
       OnboardingModel(
         background: ImageApp.backGroundObbording,
-        title:  Text(
-          "AL-MAJD MOTORS",
-          style: StyleApp.lgText,
-          textAlign: TextAlign.center,
+        title:  Padding(
+          padding: const EdgeInsets.only(top: 14),
+          child: Text(
+            "AL-MAJD MOTORS",
+            style: StyleApp.lgText.copyWith(fontSize: 25.r),
+            textAlign: TextAlign.center,
+          ),
         ),
-        description:Text("Premium Car Marketplace",style: StyleApp.smtext,),
+        description:Text("Premium Car Marketplace",style: StyleApp.smtext.copyWith(fontSize: 14.r),),
         image: ImageApp.imagesObbording2,
         footer: Align(alignment: Alignment.bottomCenter ,
             child: Column(
@@ -59,7 +62,7 @@ class OnbodingScreen extends StatelessWidget {
                 SizedBox(
 
 
-                  height: 58,
+                  height: 50.h,
 
 
                   child: Padding(
@@ -79,7 +82,7 @@ class OnbodingScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 15,),
-                Text( 'Established in Riyadh', style:StyleApp.smtext.copyWith(color: ColorsApp.secondaryGrey )),
+                Text( 'Established in Riyadh', style:StyleApp.smtext.copyWith(color: ColorsApp.secondaryGrey,fontSize: 12.r )),
 
               ],
             )),

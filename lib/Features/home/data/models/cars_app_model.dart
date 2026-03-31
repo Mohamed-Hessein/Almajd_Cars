@@ -90,8 +90,11 @@ class Data {
   int? invoice;
   String? created;
   String? modified;
-  String get imageUrl => "https://loremflickr.com/800/600/car,$make?random=$id";
-  Data(
+  String get imageUrl {
+
+    final encodedMake = Uri.encodeComponent(make ?? 'car');
+    return "https://loremflickr.com/800/600/car,$encodedMake?random=$id";
+  } Data(
       {this.id,
         this.makeId,
         this.modelId,

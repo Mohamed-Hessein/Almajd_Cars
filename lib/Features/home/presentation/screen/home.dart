@@ -53,6 +53,9 @@ List<Data>filterdList = [];
                   children: [
 
                     flutter.TextField(
+                        onChanged: (vlaue){
+
+                        },
                       decoration: flutter.InputDecoration(
                         prefixIcon: Padding(
                           padding: const EdgeInsets.all(15.0),

@@ -2,7 +2,7 @@ class CarsSpec {
   bool? success;
   Input? input;
   Attributes? attributes;
-  List<Colors>? colors;
+  List<ColorsCars>? colors;
   Equipment? equipment;
   List<Warranties>? warranties;
   String? timestamp;
@@ -23,9 +23,9 @@ class CarsSpec {
         ? new Attributes.fromJson(json['attributes'])
         : null;
     if (json['colors'] != null) {
-      colors = <Colors>[];
+      colors = <ColorsCars>[];
       json['colors'].forEach((v) {
-        colors!.add(new Colors.fromJson(v));
+        colors!.add(new ColorsCars.fromJson(v));
       });
     }
     equipment = json['equipment'] != null
@@ -393,13 +393,13 @@ class Attributes {
   }
 }
 
-class Colors {
+class ColorsCars {
   String? category;
   String? name;
 
-  Colors({this.category, this.name});
+  ColorsCars({this.category, this.name});
 
-  Colors.fromJson(Map<String, dynamic> json) {
+  ColorsCars.fromJson(Map<String, dynamic> json) {
     category = json['category'];
     name = json['name'];
   }

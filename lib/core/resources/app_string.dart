@@ -24,6 +24,7 @@ abstract class AppString {
 
   static const String popular = 'Popular Brands';
 
+  static const String carsDetails = 'Cars Details';
   static const String viewAll = 'View All';
   static const String featured = 'Featured Selections';
 }
