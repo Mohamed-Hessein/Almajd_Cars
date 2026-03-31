@@ -8,7 +8,7 @@ class FeaturedShimmer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 200.h,
+      height: 190.h,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         itemCount: 3,
@@ -17,8 +17,8 @@ class FeaturedShimmer extends StatelessWidget {
           baseColor: Colors.grey[300]!,
           highlightColor: Colors.grey[100]!,
           child: Container(
-            width: 290.w,
-            height: 200.h,
+            width: 250.w,
+            height: 190.h,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(25.r),

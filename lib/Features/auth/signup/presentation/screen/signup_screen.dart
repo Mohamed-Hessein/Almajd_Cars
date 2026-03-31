@@ -35,7 +35,7 @@ TextEditingController nameController = TextEditingController();
           if(state is SignUpLoading){
             return Center(child: CircularProgressIndicator(),);
           }else if(state is SignUpError){
-            return  Center(child: Text(state.errorMessage,style: TextStyle(color: Colors.white),),);
+            return  Center(child: Text(state.errorMessage,style: TextStyle(color: Colors.red),),);
           }else{
           return   Scaffold(
             appBar: AppBar(backgroundColor: Colors.transparent,),
@@ -51,7 +51,7 @@ TextEditingController nameController = TextEditingController();
 
 
 
-                    Text(AppString.registerTitle,style: StyleApp.lgText.copyWith(fontSize: 24,fontWeight: FontWeight.bold,color: ColorsApp.blueDark),)
+                    Text(AppString.registerTitle,style: StyleApp.lgText.copyWith(fontSize: 18.r,fontWeight: FontWeight.bold,color: ColorsApp.blueDark),)
                     ,   Text(AppString.registerSubTitle,style: StyleApp.vlagTex.copyWith(letterSpacing: 0,fontSize: 14,fontWeight: FontWeight.w100),)
                     ,
 

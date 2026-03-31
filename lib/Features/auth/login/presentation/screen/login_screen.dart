@@ -48,9 +48,9 @@ class LoginScreen extends StatelessWidget {
 
                     Row(
 
-                      children: [Image.asset(ImageApp.iconOfAppLogin,height: 45,width: 45,),SizedBox(width: 10,), Text(AppString.nmaeOfApp,style: StyleApp.lgText,)],)
+                      children: [Image.asset(ImageApp.iconOfAppLogin,height: 45,width: 45,),SizedBox(width: 10,), Text(AppString.nmaeOfApp,style: StyleApp.lgText.copyWith(fontSize: 28.r),)],)
                     ,
-                    Text(AppString.welcome,style: StyleApp.lgText.copyWith(fontWeight: FontWeight.w100),)
+                    Text(AppString.welcome,style: StyleApp.lgText.copyWith(fontWeight: FontWeight.w100,fontSize: 22.r),)
                     ,   Text(AppString.subTitleLogiN,style: StyleApp.vlagTex.copyWith(letterSpacing: 0,fontSize: 14,fontWeight: FontWeight.w100),)
                     ,
 

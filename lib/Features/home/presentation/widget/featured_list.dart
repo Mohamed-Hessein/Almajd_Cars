@@ -21,6 +21,7 @@ class FeaturedList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var height = flutter.MediaQuery.of(context).size.height;
     return BlocBuilder<HomeBloc, HomeCarsState>(
       builder: (BuildContext context, state) {
         if (state.getCarsSpecStatus == CarsRequestStatus.error) {
@@ -62,8 +63,8 @@ class FeaturedList extends StatelessWidget {
                 child: Stack(
                   children: [
                     Container(
-                      width: 290.w,
-                      height: 230.h,
+                      width: 250.w,
+                      height: 190.h,
                       decoration: flutter.BoxDecoration(
                         borderRadius: flutter.BorderRadius.circular(25.r),
                       ),
@@ -83,7 +84,7 @@ class FeaturedList extends StatelessWidget {
                     ),
                     Positioned(
                       top: 10.h,
-                      left: 10.w,
+                      left: 8.w,
                       child: Container(
                         padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.h),
                         decoration: flutter.BoxDecoration(
@@ -130,8 +131,8 @@ class FeaturedList extends StatelessWidget {
                       ),
                     ),
                     Positioned(
-                      bottom: 15.h,
-                      left: 15.w,
+                      bottom: 45.h,
+                      left: 8.w,
                       child: Column(
                         crossAxisAlignment: flutter.CrossAxisAlignment.start,
                         children: [
