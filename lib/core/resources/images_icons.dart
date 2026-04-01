@@ -32,6 +32,12 @@ class IconApp {
   static String engeine = "${PathImageAndIconApp.pathIcon}/engeine.png";
   static String autom = "${PathImageAndIconApp.pathIcon}/autom.png";
   static String time = "${PathImageAndIconApp.pathIcon}/time.png";
+  static String homeIc = "${PathImageAndIconApp.pathIcon}/home_ic.png";
+  static String profileIc = "${PathImageAndIconApp.pathIcon}/profile_ic.png";
+  static String chatIc = "${PathImageAndIconApp.pathIcon}/messageing.png";
+
+
+
 }
 class ImageApp {
   static String imagesObbording2 = "${PathImageAndIconApp.pathImage}/Logo Icon_ Abstract Automotive Shield.png";

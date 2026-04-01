@@ -11,13 +11,12 @@ import 'details_ds.dart';
 class DetailsDsImpl implements DetailsDs {
   ApiManager api;
   DetailsDsImpl(this.api);
-
-  @override
+ @override
 
   Future<vinModel> getVin(dynamic carData) async {
     try {
       final response = await api.get(
-        "https://api.marketcheck.com/v2/search/car/active",
+       AppConstants.basedetails,
         queryParameters: {
           'api_key': EndPoint.apiKey,
           'year': carData['year'],

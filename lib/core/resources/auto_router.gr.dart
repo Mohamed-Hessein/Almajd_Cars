@@ -9,31 +9,79 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i7;
+import 'package:auto_route/auto_route.dart' as _i9;
 import 'package:cars_e_commerce/Features/auth/login/presentation/screen/login_screen.dart'
-    as _i4;
-import 'package:cars_e_commerce/Features/auth/signup/presentation/screen/signup_screen.dart'
     as _i6;
+import 'package:cars_e_commerce/Features/auth/signup/presentation/screen/signup_screen.dart'
+    as _i8;
 import 'package:cars_e_commerce/Features/cars_details/presentation/screen/cars_details.dart'
-    as _i2;
+    as _i3;
 import 'package:cars_e_commerce/Features/comperssion/prsentation/screen/compression_screen.dart'
+    as _i2;
+import 'package:cars_e_commerce/Features/discover/presenatation/screen/discovery_screen.dart'
+    as _i4;
+import 'package:cars_e_commerce/Features/home/presentation/screen/bottom_navgitor_screen.dart'
     as _i1;
 import 'package:cars_e_commerce/Features/home/presentation/screen/home.dart'
-    as _i3;
-import 'package:cars_e_commerce/Features/onBording/presentation/screen/onboding_screen.dart'
     as _i5;
-import 'package:collection/collection.dart' as _i10;
-import 'package:flutter/cupertino.dart' as _i9;
-import 'package:flutter/material.dart' as _i8;
+import 'package:cars_e_commerce/Features/onBording/presentation/screen/onboding_screen.dart'
+    as _i7;
+import 'package:collection/collection.dart' as _i12;
+import 'package:flutter/cupertino.dart' as _i10;
+import 'package:flutter/material.dart' as _i11;
 
 /// generated route for
-/// [_i1.CarComparisonScreen]
-class CarComparisonRoute extends _i7.PageRouteInfo<CarComparisonRouteArgs> {
+/// [_i1.BottomNavgitorScreen]
+class BottomNavgitorRoute extends _i9.PageRouteInfo<BottomNavgitorRouteArgs> {
+  BottomNavgitorRoute({_i10.Key? key, List<_i9.PageRouteInfo>? children})
+    : super(
+        BottomNavgitorRoute.name,
+        args: BottomNavgitorRouteArgs(key: key),
+        initialChildren: children,
+      );
+
+  static const String name = 'BottomNavgitorRoute';
+
+  static _i9.PageInfo page = _i9.PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<BottomNavgitorRouteArgs>(
+        orElse: () => const BottomNavgitorRouteArgs(),
+      );
+      return _i1.BottomNavgitorScreen(key: args.key);
+    },
+  );
+}
+
+class BottomNavgitorRouteArgs {
+  const BottomNavgitorRouteArgs({this.key});
+
+  final _i10.Key? key;
+
+  @override
+  String toString() {
+    return 'BottomNavgitorRouteArgs{key: $key}';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    if (other is! BottomNavgitorRouteArgs) return false;
+    return key == other.key;
+  }
+
+  @override
+  int get hashCode => key.hashCode;
+}
+
+/// generated route for
+/// [_i2.CarComparisonScreen]
+class CarComparisonRoute extends _i9.PageRouteInfo<CarComparisonRouteArgs> {
   CarComparisonRoute({
-    _i8.Key? key,
+    _i11.Key? key,
     required dynamic car1,
     required dynamic car2,
-    List<_i7.PageRouteInfo>? children,
+    List<_i9.PageRouteInfo>? children,
   }) : super(
          CarComparisonRoute.name,
          args: CarComparisonRouteArgs(key: key, car1: car1, car2: car2),
@@ -42,11 +90,11 @@ class CarComparisonRoute extends _i7.PageRouteInfo<CarComparisonRouteArgs> {
 
   static const String name = 'CarComparisonRoute';
 
-  static _i7.PageInfo page = _i7.PageInfo(
+  static _i9.PageInfo page = _i9.PageInfo(
     name,
     builder: (data) {
       final args = data.argsAs<CarComparisonRouteArgs>();
-      return _i1.CarComparisonScreen(
+      return _i2.CarComparisonScreen(
         key: args.key,
         car1: args.car1,
         car2: args.car2,
@@ -62,7 +110,7 @@ class CarComparisonRouteArgs {
     required this.car2,
   });
 
-  final _i8.Key? key;
+  final _i11.Key? key;
 
   final dynamic car1;
 
@@ -85,13 +133,13 @@ class CarComparisonRouteArgs {
 }
 
 /// generated route for
-/// [_i2.CarsDetails]
-class CarsDetails extends _i7.PageRouteInfo<CarsDetailsArgs> {
+/// [_i3.CarsDetails]
+class CarsDetails extends _i9.PageRouteInfo<CarsDetailsArgs> {
   CarsDetails({
-    _i9.Key? key,
+    _i10.Key? key,
     required List<String> imageUrl,
     required dynamic car,
-    List<_i7.PageRouteInfo>? children,
+    List<_i9.PageRouteInfo>? children,
   }) : super(
          CarsDetails.name,
          args: CarsDetailsArgs(key: key, imageUrl: imageUrl, car: car),
@@ -100,11 +148,11 @@ class CarsDetails extends _i7.PageRouteInfo<CarsDetailsArgs> {
 
   static const String name = 'CarsDetails';
 
-  static _i7.PageInfo page = _i7.PageInfo(
+  static _i9.PageInfo page = _i9.PageInfo(
     name,
     builder: (data) {
       final args = data.argsAs<CarsDetailsArgs>();
-      return _i2.CarsDetails(
+      return _i3.CarsDetails(
         key: args.key,
         imageUrl: args.imageUrl,
         car: args.car,
@@ -116,7 +164,7 @@ class CarsDetails extends _i7.PageRouteInfo<CarsDetailsArgs> {
 class CarsDetailsArgs {
   const CarsDetailsArgs({this.key, required this.imageUrl, required this.car});
 
-  final _i9.Key? key;
+  final _i10.Key? key;
 
   final List<String> imageUrl;
 
@@ -132,52 +180,54 @@ class CarsDetailsArgs {
     if (identical(this, other)) return true;
     if (other is! CarsDetailsArgs) return false;
     return key == other.key &&
-        const _i10.ListEquality<String>().equals(imageUrl, other.imageUrl) &&
+        const _i12.ListEquality<String>().equals(imageUrl, other.imageUrl) &&
         car == other.car;
   }
 
   @override
   int get hashCode =>
       key.hashCode ^
-      const _i10.ListEquality<String>().hash(imageUrl) ^
+      const _i12.ListEquality<String>().hash(imageUrl) ^
       car.hashCode;
 }
 
 /// generated route for
-/// [_i3.Home]
-class Home extends _i7.PageRouteInfo<HomeArgs> {
-  Home({_i9.Key? key, List<_i7.PageRouteInfo>? children})
+/// [_i4.DiscoveryScreen]
+class DiscoveryRoute extends _i9.PageRouteInfo<DiscoveryRouteArgs> {
+  DiscoveryRoute({_i11.Key? key, List<_i9.PageRouteInfo>? children})
     : super(
-        Home.name,
-        args: HomeArgs(key: key),
+        DiscoveryRoute.name,
+        args: DiscoveryRouteArgs(key: key),
         initialChildren: children,
       );
 
-  static const String name = 'Home';
+  static const String name = 'DiscoveryRoute';
 
-  static _i7.PageInfo page = _i7.PageInfo(
+  static _i9.PageInfo page = _i9.PageInfo(
     name,
     builder: (data) {
-      final args = data.argsAs<HomeArgs>(orElse: () => const HomeArgs());
-      return _i3.Home(key: args.key);
+      final args = data.argsAs<DiscoveryRouteArgs>(
+        orElse: () => const DiscoveryRouteArgs(),
+      );
+      return _i4.DiscoveryScreen(key: args.key);
     },
   );
 }
 
-class HomeArgs {
-  const HomeArgs({this.key});
+class DiscoveryRouteArgs {
+  const DiscoveryRouteArgs({this.key});
 
-  final _i9.Key? key;
+  final _i11.Key? key;
 
   @override
   String toString() {
-    return 'HomeArgs{key: $key}';
+    return 'DiscoveryRouteArgs{key: $key}';
   }
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
-    if (other is! HomeArgs) return false;
+    if (other is! DiscoveryRouteArgs) return false;
     return key == other.key;
   }
 
@@ -186,9 +236,53 @@ class HomeArgs {
 }
 
 /// generated route for
-/// [_i4.LoginScreen]
-class LoginRoute extends _i7.PageRouteInfo<LoginRouteArgs> {
-  LoginRoute({_i9.Key? key, List<_i7.PageRouteInfo>? children})
+/// [_i5.HomeScreeen]
+class HomeScreeen extends _i9.PageRouteInfo<HomeScreeenArgs> {
+  HomeScreeen({_i10.Key? key, List<_i9.PageRouteInfo>? children})
+    : super(
+        HomeScreeen.name,
+        args: HomeScreeenArgs(key: key),
+        initialChildren: children,
+      );
+
+  static const String name = 'HomeScreeen';
+
+  static _i9.PageInfo page = _i9.PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<HomeScreeenArgs>(
+        orElse: () => const HomeScreeenArgs(),
+      );
+      return _i5.HomeScreeen(key: args.key);
+    },
+  );
+}
+
+class HomeScreeenArgs {
+  const HomeScreeenArgs({this.key});
+
+  final _i10.Key? key;
+
+  @override
+  String toString() {
+    return 'HomeScreeenArgs{key: $key}';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    if (other is! HomeScreeenArgs) return false;
+    return key == other.key;
+  }
+
+  @override
+  int get hashCode => key.hashCode;
+}
+
+/// generated route for
+/// [_i6.LoginScreen]
+class LoginRoute extends _i9.PageRouteInfo<LoginRouteArgs> {
+  LoginRoute({_i10.Key? key, List<_i9.PageRouteInfo>? children})
     : super(
         LoginRoute.name,
         args: LoginRouteArgs(key: key),
@@ -197,13 +291,13 @@ class LoginRoute extends _i7.PageRouteInfo<LoginRouteArgs> {
 
   static const String name = 'LoginRoute';
 
-  static _i7.PageInfo page = _i7.PageInfo(
+  static _i9.PageInfo page = _i9.PageInfo(
     name,
     builder: (data) {
       final args = data.argsAs<LoginRouteArgs>(
         orElse: () => const LoginRouteArgs(),
       );
-      return _i4.LoginScreen(key: args.key);
+      return _i6.LoginScreen(key: args.key);
     },
   );
 }
@@ -211,7 +305,7 @@ class LoginRoute extends _i7.PageRouteInfo<LoginRouteArgs> {
 class LoginRouteArgs {
   const LoginRouteArgs({this.key});
 
-  final _i9.Key? key;
+  final _i10.Key? key;
 
   @override
   String toString() {
@@ -230,9 +324,9 @@ class LoginRouteArgs {
 }
 
 /// generated route for
-/// [_i5.OnbodingScreen]
-class OnbodingRoute extends _i7.PageRouteInfo<OnbodingRouteArgs> {
-  OnbodingRoute({_i9.Key? key, List<_i7.PageRouteInfo>? children})
+/// [_i7.OnbodingScreen]
+class OnbodingRoute extends _i9.PageRouteInfo<OnbodingRouteArgs> {
+  OnbodingRoute({_i10.Key? key, List<_i9.PageRouteInfo>? children})
     : super(
         OnbodingRoute.name,
         args: OnbodingRouteArgs(key: key),
@@ -241,13 +335,13 @@ class OnbodingRoute extends _i7.PageRouteInfo<OnbodingRouteArgs> {
 
   static const String name = 'OnbodingRoute';
 
-  static _i7.PageInfo page = _i7.PageInfo(
+  static _i9.PageInfo page = _i9.PageInfo(
     name,
     builder: (data) {
       final args = data.argsAs<OnbodingRouteArgs>(
         orElse: () => const OnbodingRouteArgs(),
       );
-      return _i5.OnbodingScreen(key: args.key);
+      return _i7.OnbodingScreen(key: args.key);
     },
   );
 }
@@ -255,7 +349,7 @@ class OnbodingRoute extends _i7.PageRouteInfo<OnbodingRouteArgs> {
 class OnbodingRouteArgs {
   const OnbodingRouteArgs({this.key});
 
-  final _i9.Key? key;
+  final _i10.Key? key;
 
   @override
   String toString() {
@@ -274,9 +368,9 @@ class OnbodingRouteArgs {
 }
 
 /// generated route for
-/// [_i6.SignupScreen]
-class SignupRoute extends _i7.PageRouteInfo<SignupRouteArgs> {
-  SignupRoute({_i9.Key? key, List<_i7.PageRouteInfo>? children})
+/// [_i8.SignupScreen]
+class SignupRoute extends _i9.PageRouteInfo<SignupRouteArgs> {
+  SignupRoute({_i10.Key? key, List<_i9.PageRouteInfo>? children})
     : super(
         SignupRoute.name,
         args: SignupRouteArgs(key: key),
@@ -285,13 +379,13 @@ class SignupRoute extends _i7.PageRouteInfo<SignupRouteArgs> {
 
   static const String name = 'SignupRoute';
 
-  static _i7.PageInfo page = _i7.PageInfo(
+  static _i9.PageInfo page = _i9.PageInfo(
     name,
     builder: (data) {
       final args = data.argsAs<SignupRouteArgs>(
         orElse: () => const SignupRouteArgs(),
       );
-      return _i6.SignupScreen(key: args.key);
+      return _i8.SignupScreen(key: args.key);
     },
   );
 }
@@ -299,7 +393,7 @@ class SignupRoute extends _i7.PageRouteInfo<SignupRouteArgs> {
 class SignupRouteArgs {
   const SignupRouteArgs({this.key});
 
-  final _i9.Key? key;
+  final _i10.Key? key;
 
   @override
   String toString() {
