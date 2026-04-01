@@ -52,6 +52,7 @@ dependencies:
   firebase_core: ^4.6.0
   dio: ^5.9.2
   shimmer: ^3.0.0
+  equatable: ^2.0.8
 
 
 dev_dependencies:

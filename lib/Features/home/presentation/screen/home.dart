@@ -25,8 +25,8 @@ import '../widget/filterf_bottom_shet.dart';
 import '../widget/latest_section.dart';
 
 @RoutePage()
-class Home extends StatelessWidget {
-  Home({super.key});
+class HomeScreeen extends StatelessWidget {
+  HomeScreeen({super.key});
 List<Data>filterdList = [];
 
   @override

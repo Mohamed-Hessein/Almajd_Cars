@@ -74,7 +74,7 @@ class LoginScreen extends StatelessWidget {
 
 
                       );}
-context.pushRoute(Home());
+context.pushRoute(HomeScreeen());
                     },),
                     SizedBox(height: 3.h,),
                     Text(textAlign: TextAlign.center,AppString.orContinue,style: StyleApp.meidumeText,)
